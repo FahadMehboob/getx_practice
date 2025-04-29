@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_practice/ImagePicker/image_picker.dart';
+import 'package:getx_practice/LoginApi/login_api.dart';
 import 'package:getx_practice/counterApp/counter_app.dart';
 import 'package:getx_practice/example_three/example_three.dart';
 import 'package:getx_practice/example_two/example_two.dart';
@@ -24,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text("Getx Practice"),
         centerTitle: true,
       ),
-      body: Column(
+      body: ListView(
         children: [
           Card(
             child: ListTile(
@@ -121,6 +122,15 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               title: const Text("Getx Image Picker"),
               subtitle: const Text("Gext Image Picker"),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              onTap: () {
+                Get.to(() => const LoginApi());
+              },
+              title: const Text("Getx Login Api"),
+              subtitle: const Text("Gext Login Api"),
             ),
           ),
         ],
